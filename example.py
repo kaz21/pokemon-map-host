@@ -45,7 +45,7 @@ PTC_CLIENT_SECRET = credentials.get('ptc_client_secret', None)
 ANDROID_ID = credentials.get('android_id', None)
 SERVICE = credentials.get('service', None)
 CLIENT_SIG = credentials.get('client_sig', None)
-GOOGLEMAPS_KEY = credentials.get('gmaps_key', None)
+GOOGLEMAPS_KEY = credentials.get('c', None)
 
 SESSION = requests.session()
 SESSION.headers.update({'User-Agent': 'Niantic App'})
@@ -452,7 +452,8 @@ def get_args():
         "-ar",
         "--auto_refresh",
         help="Enables an autorefresh that behaves the same as a page reload. " +
-             "Needs an integer value for the amount of seconds")
+             "Needs an integer value for the amount of seconds",
+        default=5)
     parser.add_argument(
         '-dp',
         '--display-pokestop',
@@ -464,7 +465,7 @@ def get_args():
         '--display-gym',
         help='Display Gym',
         action='store_true',
-        default=False)
+        default=True)
     parser.add_argument(
         '-H',
         '--host',
