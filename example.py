@@ -547,6 +547,7 @@ def login(args):
     return api_endpoint, access_token, profile_response
 
 def main():
+    print "I ran!"
     full_path = os.path.realpath(__file__)
     (path, filename) = os.path.split(full_path)
 
@@ -906,6 +907,7 @@ def get_map():
 
 
 if __name__ == '__main__':
+    print "I ran!"
     args = get_args()
     register_background_thread(initial_registration=True)
     app.run(debug=True, threaded=True, host=args.host, port=args.port)
