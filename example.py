@@ -453,13 +453,13 @@ def get_args():
         "--auto_refresh",
         help="Enables an autorefresh that behaves the same as a page reload. " +
              "Needs an integer value for the amount of seconds",
-        default=2)
+        default=1)
     parser.add_argument(
         '-dp',
         '--display-pokestop',
         help='Display pokéstop',
         action='store_true',
-        default=False)
+        default=True)
     parser.add_argument(
         '-dg',
         '--display-gym',
@@ -486,7 +486,8 @@ def get_args():
         "-ol",
         "--onlylure",
         help='Display only lured pokéstop',
-        action='store_true')
+        action='store_true',
+        default=True)
     parser.add_argument(
         '-c',
         '--china',
