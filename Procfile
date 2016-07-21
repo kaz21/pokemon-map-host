@@ -1,1 +1,1 @@
-web: python PokemonGo-Map/example.py
+web: python example.py
