@@ -442,7 +442,7 @@ def get_args():
     parser.add_argument('-p', '--password', help='Password', default='Kaz31313131')
     parser.add_argument(
         '-l', '--location', type=parse_unicode, help='Location', default='900 Middlefield Redwood City')
-    parser.add_argument('-st', '--step-limit', help='Steps', default=5)
+    parser.add_argument('-st', '--step-limit', help='Steps', default=7)
     group = parser.add_mutually_exclusive_group(required=False)
     group.add_argument(
         '-i', '--ignore', help='Comma-separated list of Pokémon names or IDs to ignore')
@@ -453,7 +453,7 @@ def get_args():
         "--auto_refresh",
         help="Enables an autorefresh that behaves the same as a page reload. " +
              "Needs an integer value for the amount of seconds",
-        default=5)
+        default=2)
     parser.add_argument(
         '-dp',
         '--display-pokestop',
