@@ -442,7 +442,7 @@ def get_args():
     parser.add_argument('-p', '--password', help='Password', default='Kaz31313131')
     parser.add_argument(
         '-l', '--location', type=parse_unicode, help='Location', default='900 Middlefield Redwood City')
-    parser.add_argument('-st', '--step-limit', help='Steps', default=7)
+    parser.add_argument('-st', '--step-limit', help='Steps', default=4)
     group = parser.add_mutually_exclusive_group(required=False)
     group.add_argument(
         '-i', '--ignore', help='Comma-separated list of Pokémon names or IDs to ignore')
@@ -548,7 +548,6 @@ def login(args):
     return api_endpoint, access_token, profile_response
 
 def main():
-    print "I ran!"
     full_path = os.path.realpath(__file__)
     (path, filename) = os.path.split(full_path)
 
@@ -895,8 +894,6 @@ def get_pokemarkers():
 
 
 def get_map():
-    print origin_lat
-    print "blah"
     fullmap = Map(
         identifier="fullmap2",
         style='height:100%;width:100%;top:0;left:0;position:absolute;z-index:200;',
@@ -908,7 +905,6 @@ def get_map():
 
 
 if __name__ == '__main__':
-    print "I ran!"
     args = get_args()
     register_background_thread(initial_registration=True)
     port = int(os.environ.get('PORT', 5000))
