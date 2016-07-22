@@ -441,8 +441,8 @@ def get_args():
     parser.add_argument('-u', '--username', help='Username', default='kazemekdev')
     parser.add_argument('-p', '--password', help='Password', default='Kaz31313131')
     parser.add_argument(
-        '-l', '--location', type=parse_unicode, help='Location', default='900 Middlefield Redwood City')
-    parser.add_argument('-st', '--step-limit', help='Steps', default=7)
+        '-l', '--location', type=parse_unicode, help='Location', default='37.798864, -122.397612')
+    parser.add_argument('-st', '--step-limit', help='Steps', default=10)
     group = parser.add_mutually_exclusive_group(required=False)
     group.add_argument(
         '-i', '--ignore', help='Comma-separated list of Pokémon names or IDs to ignore')
