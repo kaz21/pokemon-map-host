@@ -437,8 +437,8 @@ def get_token(service, username, password):
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '-a', '--auth_service', type=str.lower, help='Auth Service', default='ptc')
-    parser.add_argument('-u', '--username', help='Username', default='kazemekdev')
+        '-a', '--auth_service', type=str.lower, help='Auth Service', default='google')
+    parser.add_argument('-u', '--username', help='Username', default='kyle.pokemon.dev@gmail.com')
     parser.add_argument('-p', '--password', help='Password', default='Kaz31313131')
     parser.add_argument(
         '-l', '--location', type=parse_unicode, help='Location', default='900 Middlefield Rd Redwood City')
