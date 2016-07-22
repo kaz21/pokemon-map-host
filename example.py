@@ -685,6 +685,9 @@ transform_from_wgs_to_gcj(Location(Fort.Latitude, Fort.Longitude))
 
     for poke in visible:
         pokeid = str(poke.pokemon.PokemonId)
+        skip = [16, 17, 19, 20, 21, 23, 41, 46, 52, 56]
+        if poke.pokemon.PokemonId in skip:
+            continue
         pokename = pokemonsJSON[pokeid]
         if args.ignore:
             if pokename.lower() in ignore or pokeid in ignore:
